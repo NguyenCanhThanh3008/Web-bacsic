@@ -4,11 +4,13 @@ const modalContainer = document.querySelector(".js-modal-container")
 const modalClose = document.querySelector(".js-close-modal")
 
 function showBuyTicker() {
+    console.log("abc")
     modal.classList.add("open")
 
 }
 
 function closeBuyTicker() {
+    console.log("abc")
     modal.classList.remove("open")
 
 }

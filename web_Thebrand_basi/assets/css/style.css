@@ -5,7 +5,7 @@
 }
 
 .open {
-    display: flex;
+    display: flex !important;
 }
 
 .row {
@@ -92,15 +92,13 @@ html {
 }
 
 #header .menu-mobile-btn:hover,
-
 .nav>li:hover a {
     background-color: #ccc;
     color: black;
 
 }
-.subnav li:hover a{
-    
-}
+
+.subnav li:hover a {}
 
 .nav li:hover .subnav {
     display: block
@@ -108,10 +106,11 @@ html {
 
 .nav .subnav {
     display: none;
-    background-color: white ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white !important;
     position: absolute
 }
+
 
 
 .nav .subnav a {
@@ -510,7 +509,7 @@ html {
     }
 }
 
-.abc{}
+.abc {}
 
 @media (max-width:1024px) {}
 
@@ -518,7 +517,7 @@ html {
 
 @media(max-width:740px) {
     #header {
-        overflow:hidden;
+        overflow: hidden;
 
     }
 
@@ -536,7 +535,8 @@ html {
         display: block;
 
     }
-    .nav .subnav{
+
+    .nav .subnav {
         position: initial;
     }
 
