@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.open {
+    display: flex;
+}
+
 .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -52,6 +56,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    /* overflow: hidden; */
 
 
 }
@@ -86,11 +91,15 @@ html {
     display: inline-block;
 }
 
-.subnav li:hover a,
-.nav>li:hover>a {
+#header .menu-mobile-btn:hover,
+
+.nav>li:hover a {
     background-color: #ccc;
     color: black;
 
+}
+.subnav li:hover a{
+    
 }
 
 .nav li:hover .subnav {
@@ -99,7 +108,7 @@ html {
 
 .nav .subnav {
     display: none;
-    background-color: white;
+    background-color: white ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: absolute
 }
@@ -117,18 +126,28 @@ html {
     background-color: #f44336
 }
 
+#header .menu-mobile-btn,
 #header .header-search {
     float: right;
+    padding: 0 24px;
 
 }
 
+.menu-mobile-btn,
 .header-search a {
     text-decoration: none;
     line-height: 46px;
-    padding: 0 24px;
     color: white;
 
 }
+
+#header .menu-mobile-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 
 #slider {
     margin-top: 46px;
@@ -162,9 +181,12 @@ html {
 #content .content-section {
     padding: 64px 0;
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -306,9 +328,6 @@ html {
     display: none;
 }
 
-.open {
-    display: flex;
-}
 
 .modal-container {
     width: 900px;
@@ -489,4 +508,47 @@ html {
         transform: translateY(0);
 
     }
+}
+
+.abc{}
+
+@media (max-width:1024px) {}
+
+@media (max-width:740px) and (max-width:1023px) {}
+
+@media(max-width:740px) {
+    #header {
+        overflow:hidden;
+
+    }
+
+    #header .menu-mobile-btn {
+        display: block;
+
+    }
+
+    .nav,
+    .nav li a {
+        display: block;
+    }
+
+    .nav>li {
+        display: block;
+
+    }
+    .nav .subnav{
+        position: initial;
+    }
+
+    .nav>li:first-child {
+        display: inline-block
+    }
+
+
+
+    #header .header-search {
+        display: none;
+    }
+
+
 }
