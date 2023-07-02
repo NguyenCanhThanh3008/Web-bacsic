@@ -28,9 +28,9 @@ modalContainer.addEventListener("click", function (event) {
 
 let header = document.getElementById("header")
 let menu = document.getElementById("mobile-menu")
-let headerHeiight = header.clientHeight
+let headerHeight = header.clientHeight
 menu.onclick = function () {
-    let isClose = header.clientHeight === headerHeiight
+    let isClose = header.clientHeight === headerHeight
     if (isClose) {
         header.style.height = "227px"
     } else {
@@ -39,16 +39,16 @@ menu.onclick = function () {
     }
 }
 
-let menuheaders = document.querySelectorAll(".nav li a[href*='#']")
-for (let i = 0; i < menuheaders.length; i++) {
-    let menuheader = menuheaders[i]
-    menuheader.onclick = function (event) {
+let menuHeaders = document.querySelectorAll(".nav li a[href*='#']")
+for (let i = 0; i < menuHeaders.length; i++) {
+    let menuHeader = menuHeaders[i]
+    menuHeader.onclick = function (event) {
         let moreHeader = this.nextElementSibling && this.nextElementSibling.classList.contains("subnav")
         if (!moreHeader) {
             header.style.height = null
             
         }else{
-            event.prevenDefault();
+            event.preventDefault();
             console.log("abc")
 
         }
